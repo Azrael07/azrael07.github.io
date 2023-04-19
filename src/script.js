@@ -1,5 +1,6 @@
 import * as THREE from 'three'
 // import * as dat from 'lil-gui'
+import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import gsap from 'gsap'
 
 /**
@@ -35,6 +36,31 @@ const scene = new THREE.Scene()
 const textureLoader = new THREE.TextureLoader()
 const gradientTexture = textureLoader.load('textures/gradients/3.jpg')
 gradientTexture.magFilter = THREE.NearestFilter
+
+
+
+
+//3D model loader
+// const gltfloader = new GLTFLoader();
+
+// gltfloader.load('models/computer.glb',
+// (gltf) =>
+// {
+//     //gltf.scene.scale.set(1,1,1)
+//     gltf.scene.position.set(0.5,-1,-2)
+//     scene.add(gltf.scene)
+// }
+// )
+
+// gltfloader.load('models/phone.glb',
+// (gltf) =>
+// {
+
+//     scene.add(gltf.scene)
+// }
+// )
+
+
 
 //Material
 const material = new THREE.MeshToonMaterial({ 
